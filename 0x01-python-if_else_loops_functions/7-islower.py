@@ -1,7 +1,5 @@
 import string
 
 def islower(c):
-    if c in list(string.ascii_uppercase):
+    if c in list(string.ascii_lowercase):
         return True
-    elif c in range (64, 91):
-        return False
