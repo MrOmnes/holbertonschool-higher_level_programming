@@ -6,6 +6,6 @@ def fizzbuzz():
         if c % 5 == 0 and c % 3 != 0:
             print("Buzz ", end="")
         if c % 5 == 0 and c % 3 == 0:
-            print("FizzBuzz", end="")
+            print("FizzBuzz ", end="")
         elif c % 5 != 0 and c % 3 != 0:
             print("{}".format(int(c)), end=" ")
