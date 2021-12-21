@@ -5,7 +5,7 @@ d = 0
 while c < 9:
     d = c + 1
     while d <= 9 and c != 8:
-        print(str(c)+str(d), end=', ')
+        print("{}".format(str(c)+str(d)), end=', ')
         d += 1
     c += 1
-print('89')
+print("{}".format(int(89)))
