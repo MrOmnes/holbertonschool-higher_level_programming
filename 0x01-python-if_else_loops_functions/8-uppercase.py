@@ -6,9 +6,9 @@ def uppercase(str):
     while c != 0:
         if ord(str[i]) in range(97, 123):
             stro = ord(str[i]) - 32
-            print(chr(stro), end="")
         else:
-            print((str[i]), end="")
+            stro = ord(str[i])
+        print(chr(stro), end="")
         i += 1
         c -= 1
     print("")
