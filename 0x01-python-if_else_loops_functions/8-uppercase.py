@@ -8,7 +8,7 @@ def uppercase(str):
             stro = ord(str[i]) - 32
         else:
             stro = ord(str[i])
-        print(chr(stro), end="")
+        print("{}".format(chr(stro)), end="")
         i += 1
         c -= 1
     print("")
