@@ -3,7 +3,7 @@ import hidden_4
 a = dir(hidden_4)
 i = 1
 if __name__ == '__main__':
-    while i != 12:
+    while i != len(dir(hidden_4)):
         if a[i][1] != '_':
             print("{}".format(str(a[i])))
             i += 1
