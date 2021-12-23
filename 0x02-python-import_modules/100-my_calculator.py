@@ -8,16 +8,16 @@ if __name__ == '__main__':
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     else:
         if sys.argv[2] == '+':
-            print(a, "+", "{}".format(str(b)), "=", add(a, b))
+            print("{} {} {} = {}".format(str(a), "+", str(b), add(a, b)))
             exit(0)
         if sys.argv[2] == '-':
-            print(a, "-", "{}".format(str(b)), "=", sub(a, b))
+            print("{} {} {} = {}".format(str(a), "-", str(b), sub(a, b)))
             exit(0)
         if sys.argv[2] == '*':
-            print(a, "*", "{}".format(str(b)), "=", mul(a, b))
+            print("{} {} {} = {}".format(str(a), "*", str(b), mul(a, b)))
             exit(0)
         if sys.argv[2] == '/':
-            print(a, "/", "{}".format(str(b)), "=", div(a, b))
+            print("{} {} {} = {}".format(str(a), "/", str(b), div(a, b)))
             exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
