@@ -6,24 +6,18 @@ if __name__ == '__main__':
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
+        a = int(sys.argv[1])
+        b = int(sys.argv[3])
         if sys.argv[2] == '+':
-            a = int(sys.argv[1])
-            b = int(sys.argv[3])
             print("{} {} {} = {}".format(str(a), "+", str(b), add(a, b)))
             exit(0)
-        if sys.argv[2] == '-':
-            a = int(sys.argv[1])
-            b = int(sys.argv[3])
+        elif sys.argv[2] == '-':
             print("{} {} {} = {}".format(str(a), "-", str(b), sub(a, b)))
             exit(0)
-        if sys.argv[2] == '*':
-            a = int(sys.argv[1])
-            b = int(sys.argv[3])
+        elif sys.argv[2] == '*':
             print("{} {} {} = {}".format(str(a), "*", str(b), mul(a, b)))
             exit(0)
-        if sys.argv[2] == '/':
-            a = int(sys.argv[1])
-            b = int(sys.argv[3])
+        elif sys.argv[2] == '/':
             print("{} {} {} = {}".format(str(a), "/", str(b), div(a, b)))
             exit(0)
         else:
