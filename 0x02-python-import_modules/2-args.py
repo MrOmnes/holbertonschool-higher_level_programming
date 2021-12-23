@@ -7,6 +7,6 @@ if len(sys.argv) == 0:
 else:
     print(len(sys.argv) - 1, "arguments:")
     while(c != 0):
-        print(d, ":", sys.argv[d])
+        print("{}".format(str(d)) + ":", sys.argv[d])
         d += 1
         c -= 1
