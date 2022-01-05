@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     result = 0
     while i != 0:
         if roman_string[c] not in checker:
-            return None
+            return 0
         if roman_string[c] in checker:
             letterValue = checker.get(roman_string[c])
 
