@@ -6,9 +6,10 @@ def roman_to_int(roman_string):
     result = 0
     while i != 0:
         if roman_string[c] in checker:
-            result += checker.get(roman_string[c])
-        if result == 11:
-            result = 9
+            if checker.get(roman_string[c]) >= checker.get(roman_string[c - 1]) and result != 0:
+                result += checker.get(roman_string[c]) - checker.get(roman_string[c - 1])
+            else:
+                result += checker.get(roman_string[c])
         i -= 1
         c += 1
     return result
