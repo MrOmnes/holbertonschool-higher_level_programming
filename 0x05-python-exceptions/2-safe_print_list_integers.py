@@ -14,9 +14,9 @@ def safe_print_list_integers(my_list=[], x=0):
             count += 1
         except TypeError:
             i -= 1
-            value +=1
+            value += 1
         except ValueError:
             i -= 1
-            value +=1
+            value += 1
     print()
     return count
