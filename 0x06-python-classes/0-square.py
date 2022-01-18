@@ -3,6 +3,7 @@
     This is just a Square
 """
 
+
 class Square:
     """Class that print a Square"""
     pass
