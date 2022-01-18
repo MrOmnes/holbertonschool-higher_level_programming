@@ -3,7 +3,9 @@
     This is just a Square
 """
 
+
 import math
+
 
 class MagicClass:
     """
