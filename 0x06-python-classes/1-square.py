@@ -7,5 +7,11 @@
 class Square:
     """Definie the size of the square"""
     def __init__(self, size):
-        """Size of the square"""
+        """
+        Parameters
+        ----------
+        size : int
+            The size of the square.
+        """
+
         self.__size = 3
