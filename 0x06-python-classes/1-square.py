@@ -21,4 +21,4 @@ class Square:
             The size of the square.
         """
 
-        self.__size = 3
+        self.__size = size
