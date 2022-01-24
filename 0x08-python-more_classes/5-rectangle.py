@@ -50,6 +50,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         elif type(value) is int and value >= 0:
             self.__width = value
+
     @property
     def height(self):
         return self.__height
