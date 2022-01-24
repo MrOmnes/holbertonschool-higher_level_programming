@@ -27,7 +27,8 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
-        return ("#" * self.__width + "\n") * (self.__height - 1 ) + "#" * self.__width
+        return ("#" * self.__width + "\n") * \
+            (self.__height - 1) + "#" * self.__width
 
     @property
     def width(self):
@@ -41,6 +42,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         elif type(value) is int and value >= 0:
             self.__width = value
+
     @property
     def height(self):
         return self.__height
