@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0-rectangle.py:
+"""3-rectangle.py:
     This is just a Rectangle
 """
 
