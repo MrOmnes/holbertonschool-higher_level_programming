@@ -3,6 +3,7 @@
     This is just a Rectangle
 """
 
+
 class Rectangle:
 
     number_of_instances = 0
