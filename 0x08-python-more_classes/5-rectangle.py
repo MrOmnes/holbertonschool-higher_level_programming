@@ -19,7 +19,10 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
-        return ("#" * self.__width + "\n") * (self.__height - 1 ) + "#" * self.__width
+        if self.__width == 0 or self.height == 0:
+            return ""
+        return ("#" * self.__width + "\n") * \
+            (self.__height - 1) + "#" * self.__width
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
