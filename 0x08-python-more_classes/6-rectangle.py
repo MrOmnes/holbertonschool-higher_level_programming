@@ -5,10 +5,19 @@
 
 
 class Rectangle:
+    """Class that print a Rectangle"""
 
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        """
+        Parameters
+        ----------
+        width : int
+            The width of the rectangle.
+        height : int
+            The height of the rectangle.
+        """
         self.__height = height
         self.__width = width
         Rectangle.number_of_instances += 1
