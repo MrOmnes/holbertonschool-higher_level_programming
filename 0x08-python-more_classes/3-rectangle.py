@@ -27,6 +27,8 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     def __str__(self):
+        if self.__width == 0 or self.height == 0:
+            return ""
         return ("#" * self.__width + "\n") * \
             (self.__height - 1) + "#" * self.__width
 
