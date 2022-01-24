@@ -3,6 +3,7 @@
     This is just a Rectangle
 """
 
+
 class Rectangle:
     """Class that print a Rectangle"""
     pass
