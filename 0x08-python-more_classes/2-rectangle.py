@@ -5,8 +5,16 @@
 
 
 class Rectangle:
-
+    """Class that print a Rectangle"""
     def __init__(self, width=0, height=0):
+        """
+        Parameters
+        ----------
+        width : int
+            The width of the rectangle.
+        height : int
+            The height of the rectangle.
+        """
         self.__height = height
         self.__width = width
 
@@ -28,6 +36,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         elif type(value) is int and value >= 0:
             self.__width = value
+
     @property
     def height(self):
         return self.__height
