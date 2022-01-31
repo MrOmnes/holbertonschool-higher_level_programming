@@ -24,3 +24,7 @@ This is an example text file in reStructuredText format.  First import
 
 	>>> my_list.pop(2)
 	1
+
+	>>> my_list.reverse()
+	>>> print(my_list)
+	[-6, 4, 2, 3]
