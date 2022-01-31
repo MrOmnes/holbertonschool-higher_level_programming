@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Check if is inherits from"""
+
+
 def inherits_from(obj, a_class):
-	if isinstance(type(obj), a_class):
-		return True
-	else:
-		return False
+    """Check if is inherits from"""
+    return issubclass(type(obj), a_class) and type(obj) != a_class
