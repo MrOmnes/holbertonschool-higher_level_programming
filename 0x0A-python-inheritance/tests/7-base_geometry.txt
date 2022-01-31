@@ -30,3 +30,18 @@
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
+
+    >>> BaseGeometry.integer_validator(1, "size", (2, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> BaseGeometry.integer_validator(1, "size", 5.2)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> BaseGeometry.integer_validator(1, "size", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
