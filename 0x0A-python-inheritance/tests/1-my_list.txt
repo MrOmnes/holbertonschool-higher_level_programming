@@ -7,9 +7,9 @@ Using ``my_list``
 This is an example text file in reStructuredText format.  First import
 ``print_sorted`` from the ``my_list`` module:
 
-    >>> my_list = __import__('1-my_list').print_sorted
+    >>> print_sorted = __import__('1-my_list').print_sorted
 
 Now use it:
 
-    >>> print_sorted(1, 2)
-    [1, 2]
+    >>> print_sorted(1, 2, 4, 5, 3)
+    [1, 2, 3, 4, 5]
