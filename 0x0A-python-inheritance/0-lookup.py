@@ -3,6 +3,7 @@
     Print all attributes of an objects
 """
 
+
 def lookup(obj):
-	attributes = dir(obj)
-	return(attributes)
+    attributes = dir(obj)
+    return(attributes)
