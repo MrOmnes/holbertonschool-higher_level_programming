@@ -15,3 +15,18 @@
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
+
+    >>> BaseGeometry.integer_validator(1, "size")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator(1, "size", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> BaseGeometry.integer_validator(1, "size", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be greater than 0
