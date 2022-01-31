@@ -1,15 +1,17 @@
-The ``my_list`` module
-======================
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Using ``my_list``
--------------------
 
-This is an example text file in reStructuredText format.  First import
-``print_sorted`` from the ``my_list`` module:
+    >>> BaseGeometry.integer_validator(1, "height", "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: height must be an integer
 
-    >>> my_list = __import__('1-my_list').print_sorted
+    >>> BaseGeometry.integer_validator(1, "colas", "working")
+    Traceback (most recent call last):
+    ...
+    TypeError: colas must be an integer
 
-Now use it:
-
-    >>> print_sorted(1, 2)
-    3
+    >>> BaseGeometry.integer_validator(1, "size", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be greater than 0
