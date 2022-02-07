@@ -76,6 +76,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
+        """ Display the rectangle """
         c = self.__y
         while c != 0:
             print('')
@@ -84,10 +85,12 @@ class Rectangle(Base):
               (self.__height - 1) + (" " * self.__x) + ("#" * self.__width))
 
     def __str__(self):
+        """ Return the format of the rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """ Update the rectangle """
         if len(args) == 0:
             for key, value, in kwargs.items():
                 if key == 'id':
@@ -112,4 +115,5 @@ class Rectangle(Base):
             self.__y = args[4]
 
     def to_dictionary(self):
+        """ Return the dicitionnary of the rectangle """
         return vars(self)
