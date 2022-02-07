@@ -24,3 +24,11 @@ class Base:
             return json.dumps(list_dictionaries)
         except Exception:
             return []
+
+    def save_to_file(cls, list_objs):
+        """ Save to file """
+        with open(cls + ".json", "w+") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                f.write(json.dumps(list_objs))

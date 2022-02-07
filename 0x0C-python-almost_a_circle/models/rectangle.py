@@ -9,28 +9,15 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Init with x, y, width, height and id"""
 
-        self.__x = x
-        self.__y = y
-        self.__width = width
-        self.__height = height
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
 
         if id is not None:
             self.id = id
         else:
             super().__init__(id)
-
-    @property
-    def width(self):
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        elif type(value) is int and value > 0:
-            self.__width = value
 
     @property
     def height(self):
@@ -44,6 +31,19 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         elif type(value) is int and value > 0:
             self.__height = value
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        elif type(value) is int and value > 0:
+            self.__width = value
 
     @property
     def x(self):
@@ -81,9 +81,8 @@ class Rectangle(Base):
         while c != 0:
             print('')
             c -= 1
-        if self.width >= 1:
-            print(((" " * self.__x) + ("#" * self.__width + "\n")) *
-                (self.__height - 1) + (" " * self.__x) + ("#" * self.__width))
+        print(((" " * self.__x) + ("#" * self.__width + "\n")) *
+              (self.__height - 1) + (" " * self.__x) + ("#" * self.__width))
 
     def __str__(self):
         """ Return the format of the rectangle """
