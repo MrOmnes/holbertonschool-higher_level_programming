@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Class Rectangle"""
-
-
 from models.base import Base
 
 
@@ -74,6 +72,7 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """ Return the area of the rectangle """
         return self.__height * self.__width
 
     def display(self):
