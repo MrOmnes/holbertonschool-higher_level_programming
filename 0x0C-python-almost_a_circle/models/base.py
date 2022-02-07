@@ -32,3 +32,7 @@ class Base:
                 f.write("[]")
             else:
                 f.write(json.dumps(list_objs))
+
+    def from_json_string(json_string):
+        """ From Json to string """
+        return json.loads(json_string)
