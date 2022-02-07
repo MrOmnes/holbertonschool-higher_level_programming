@@ -81,8 +81,9 @@ class Rectangle(Base):
         while c != 0:
             print('')
             c -= 1
-        print(((" " * self.__x) + ("#" * self.__width + "\n")) *
-              (self.__height - 1) + (" " * self.__x) + ("#" * self.__width))
+        if self.width >= 1:
+            print(((" " * self.__x) + ("#" * self.__width + "\n")) *
+                (self.__height - 1) + (" " * self.__x) + ("#" * self.__width))
 
     def __str__(self):
         """ Return the format of the rectangle """
