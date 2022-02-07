@@ -13,8 +13,8 @@ class Rectangle(Base):
 
         self.__x = x
         self.__y = y
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
         if id is not None:
             self.id = id
