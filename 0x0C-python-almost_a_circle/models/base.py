@@ -21,10 +21,10 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """To Json String"""
-        try:
-            return json.dumps(list_dictionaries)
-        except Exception:
+        if list_dictionaries is None or list_dictionaries is Empty:
             return []
+        else:
+            return json.dumps(list_dictionaries)
 
     def save_to_file(cls, list_objs):
         """ Save to file """
