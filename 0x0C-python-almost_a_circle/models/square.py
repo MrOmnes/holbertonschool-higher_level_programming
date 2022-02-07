@@ -31,6 +31,32 @@ class Square(Rectangle):
         elif type(value) is int and value >= 0:
             self.__size = value
 
+    @property
+    def x(self):
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        elif type(value) is int and value >= 0:
+            self.__x = value
+
+    @property
+    def y(self):
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        elif type(value) is int and value >= 0:
+            self.__y = value
+
     def update(self, *args, **kwargs):
         """ Update The Square """
         if len(args) == 0:
