@@ -28,11 +28,17 @@ class Base:
 
     def save_to_file(cls, list_objs):
         """ Save to file """
+        parsed =  []
+        if list_objs is not None:
+            for item in list_objs:
+                parsed.append(item.to_dictionary())
+            parsed = Base.to_json_string(parsed)
+
         with open(cls.__name__ + ".json", "w+") as f:
             if list_objs is None:
                 f.write("[]")
             else:
-                f.write(json.dumps(list_objs))
+                f.write(parsed)
 
     def from_json_string(json_string):
         """ From Json to string """

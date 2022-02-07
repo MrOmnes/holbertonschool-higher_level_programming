@@ -119,12 +119,6 @@ class Rectangle(Base):
         return {'x': self.__x, 'y': self.__y, 'id': self.id,
                 'height': self.__height, 'width': self.__width}
 
-    def save_to_file(rectangles):
+    def save_to_file(items):
         """Save to file"""
-        dicts = []
-
-        if rectangles is not None:
-            for item in rectangles:
-                dicts.append(item.to_dictionary())
-
-        Base.save_to_file(Rectangle, dicts)
+        Base.save_to_file(Rectangle, items)
