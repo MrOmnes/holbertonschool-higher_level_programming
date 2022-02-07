@@ -14,6 +14,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ Definition of the square """
         return "[Square] ({}) {}/{} - {}"\
                 .format(self.id, self.__x, self.__y, self.__size)
 
@@ -31,6 +32,7 @@ class Square(Rectangle):
             self.__size = value
 
     def update(self, *args, **kwargs):
+        """ Update The Square """
         if len(args) == 0:
             for key, value, in kwargs.items():
                 if key == 'id':
