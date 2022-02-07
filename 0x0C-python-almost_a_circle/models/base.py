@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Base class"""
 
+
 import json
+
 
 class Base:
     """nb object to set an id"""
