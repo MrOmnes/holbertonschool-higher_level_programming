@@ -28,7 +28,7 @@ class Base:
 
     def save_to_file(cls, list_objs):
         """ Save to file """
-        parsed =  []
+        parsed = []
         if list_objs is not None:
             for item in list_objs:
                 parsed.append(item.to_dictionary())
