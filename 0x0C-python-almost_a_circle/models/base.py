@@ -3,6 +3,7 @@
 
 
 import json
+from queue import Empty
 
 
 class Base:
@@ -35,4 +36,7 @@ class Base:
 
     def from_json_string(json_string):
         """ From Json to string """
-        return json.loads(json_string)
+        if json_string is Empty or json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
