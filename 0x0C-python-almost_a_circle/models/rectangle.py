@@ -123,7 +123,8 @@ class Rectangle(Base):
         """Save to file"""
         dicts = []
 
-        for item in rectangles:
-            dicts.append(item.to_dictionary())
+        if rectangles is not None:
+            for item in rectangles:
+                dicts.append(item.to_dictionary())
 
         Base.save_to_file(Rectangle, dicts)

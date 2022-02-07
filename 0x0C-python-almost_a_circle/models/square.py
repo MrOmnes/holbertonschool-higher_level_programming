@@ -62,8 +62,8 @@ class Square(Rectangle):
     def save_to_file(squares):
         """ Save to File """
         dicts = []
-
-        for item in squares:
-            dicts.append(item.to_dictionary())
+        if squares is not None:
+            for item in squares:
+                dicts.append(item.to_dictionary())
 
         Base.save_to_file(Square, dicts)
