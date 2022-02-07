@@ -118,3 +118,12 @@ class Rectangle(Base):
         """ Return the dicitionnary of the rectangle """
         return {'x': self.__x, 'y': self.__y, 'id': self.id,
                 'height': self.__height, 'width': self.__width}
+
+    def save_to_file(rectangles):
+        """Save to file"""
+        dicts = []
+
+        for item in rectangles:
+            dicts.append(item.to_dictionary())
+
+        Base.save_to_file(Rectangle, dicts)

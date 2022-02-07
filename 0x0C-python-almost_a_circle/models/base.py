@@ -28,7 +28,7 @@ class Base:
 
     def save_to_file(cls, list_objs):
         """ Save to file """
-        with open(cls + ".json", "w+") as f:
+        with open(cls.__name__ + ".json", "w+") as f:
             if list_objs is None:
                 f.write("[]")
             else:
@@ -45,3 +45,11 @@ class Base:
         """Dictionnary to object"""
         for key in dictionary:
             setattr(cls, key, dictionary[key])
+
+    def load_from_json_file(cls):
+        """Load from a json file"""
+        with open(cls+".json", "r") as f:
+            try:
+                return json.load(f)
+            except Exception:
+                return []
