@@ -40,3 +40,8 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """Dictionnary to object"""
+        for key in dictionary:
+            setattr(cls, key, dictionary[key])
