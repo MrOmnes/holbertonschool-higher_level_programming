@@ -1,2 +1,2 @@
 -- Average
-SELECT score, COUNT(score) AS "number" from second_table GROUP by score
+SELECT score, COUNT(score) AS "number" FROM second_table GROUP BY score
