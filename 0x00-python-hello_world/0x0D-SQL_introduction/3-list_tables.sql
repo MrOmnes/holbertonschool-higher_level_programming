@@ -1,0 +1,2 @@
+-- SELECT ALL from table
+SHOW TABLES;

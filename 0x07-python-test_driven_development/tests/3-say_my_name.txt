@@ -16,3 +16,6 @@ Now use it:
 
     >>> say_my_name("", "Smith")
     My name is  Smith
+
+    >>> say_my_name(6, "test")
+    first_name must be a string
