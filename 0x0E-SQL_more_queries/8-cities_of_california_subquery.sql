@@ -1,2 +1,2 @@
 -- List Cities
-SELECT * FROM cities ORDER by cities.id ASC
+SELECT cities.id, states.name FROM cities, states WHERE states.name = 'California' AND states.id = cities.state_id
