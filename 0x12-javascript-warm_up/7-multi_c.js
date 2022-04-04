@@ -6,6 +6,9 @@ if (Number.isInteger(i) && Math.sign(i) === 1) {
     console.log(myVar);
     i--;
   }
+}
+else if (Number.isInteger(i) && Math.sign(i) !== 1) {
+  i--;
 } else {
   console.log('Missing number of occurrences');
 }
