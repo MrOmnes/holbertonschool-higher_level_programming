@@ -1,19 +1,12 @@
 #!/usr/bin/node
 let i = 2;
-let result = 0;
-let c = 1;
+let values = [];
+if (process.argv[2] === undefined || process.argv[3] === undefined){
+	console.log(0);
+}
 while (process.argv[i] !== undefined) {
-  if (process.argv[i] > result) {
-    if (c === 1) {
-      result = process.argv[i];
-      c++;
-    } else {
-      c++;
-    }
-    i++;
-  } else {
-    i++;
-  }
+	values.push(process.argv[i]);
+	i++;
 }
 
-console.log(result);
+console.log(values.sort().reverse()[1]);
