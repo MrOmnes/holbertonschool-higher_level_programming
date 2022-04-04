@@ -8,7 +8,7 @@ if (Number.isInteger(i) && Math.sign(i) === 1) {
     c--;
   }
 } else if (Number.isInteger(i) && Math.sign(i) !== 1) {
-	c--;
+  c--;
 } else {
   console.log('Missing size');
 }
