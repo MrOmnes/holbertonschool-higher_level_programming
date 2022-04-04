@@ -5,7 +5,9 @@ if (process.argv[2] === undefined || process.argv[3] === undefined) {
   console.log(0);
 } else {
   while (process.argv[i] !== undefined) {
-    values.push(process.argv[i]);
+    if (!values.includes(process.argv[i])) {
+      values.push(process.argv[i]);
+    }
     i++;
   }
 
