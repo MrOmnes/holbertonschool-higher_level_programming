@@ -8,10 +8,10 @@ class Rectangle {
   }
 
   print () {
-    const character = 'X';
+    const myVar = 'X';
     let i = this.height;
     while (i !== 0) {
-      console.log(character.repeat(this.width));
+      console.log(myVar.repeat(this.width));
       i--;
     }
   }
@@ -34,13 +34,13 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    let character = c;
-    if (character === undefined) {
-        character = 'X';
+    let myVar = c;
+    if (myVar === undefined) {
+      myVar = 'X';
     }
     let i = this.height;
     while (i !== 0) {
-      console.log(character.repeat(this.width));
+      console.log(myVar.repeat(this.width));
       i--;
     }
   }
