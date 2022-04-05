@@ -31,7 +31,7 @@ class Rectangle {
 class Square extends Rectangle {
   constructor (size) {
     super(size, size);
-  }
+  };
 
   charPrint (c) {
     let myVar = c;
