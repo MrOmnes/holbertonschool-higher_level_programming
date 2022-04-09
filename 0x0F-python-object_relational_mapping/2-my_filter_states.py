@@ -12,7 +12,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', user=user, passwd=passwd, db=db)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name =\
-        '{}'".format(sys.argv[4]))
+        '{}' ORDER BY id".format(sys.argv[4]))
     result = cursor.fetchall()
 
     for x in result:
