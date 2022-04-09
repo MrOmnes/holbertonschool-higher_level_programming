@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Select * From States"""
 
 import MySQLdb
 import sys

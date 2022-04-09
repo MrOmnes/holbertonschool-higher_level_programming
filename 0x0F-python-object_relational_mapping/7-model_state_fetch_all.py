@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"Print all state from states"
+"""Print all state from states"""
 
 import sys
 from sqlalchemy import Column, Integer, String
