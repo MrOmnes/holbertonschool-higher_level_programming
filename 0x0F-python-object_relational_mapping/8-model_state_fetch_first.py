@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Print first states"""
 
 import sys
 from sqlalchemy import Column, Integer, String
