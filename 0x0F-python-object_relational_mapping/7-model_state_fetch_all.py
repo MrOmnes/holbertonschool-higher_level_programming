@@ -7,10 +7,14 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 
+s = 'mysql+mysqldb://'
+n = sys.argv[1]
+p = sys.argv[2]
+b = sys.argv[3]
+i = '@localhost'
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/\
-        {}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    engine = create_engine('{}{}:{}{}/{}'.format(s, n, p, i, b))
     Base.metadata.create_all(engine)
 
     from sqlalchemy.orm import sessionmaker
