@@ -17,12 +17,9 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).all()
-    i = 1
+    result = session.query(State).first()
 
-    for state in result:
-        while i == 1:
-            if state.id is None:
-                print("Nothing")
-            print("{}: {}".format(state.id, state.name))
-            i += 1
+    if not result:
+        print("Nothing")
+    else:
+        print("{}: {}".format(result.id, result.name))
