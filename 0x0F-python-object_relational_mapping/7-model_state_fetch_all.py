@@ -7,13 +7,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 
-s = 'mysql+mysqldb://'
-n = sys.argv[1]
-p = sys.argv[2]
-b = sys.argv[3]
-i = '@localhost'
-
 if __name__ == "__main__":
+    s = 'mysql+mysqldb://'
+    n = sys.argv[1]
+    p = sys.argv[2]
+    b = sys.argv[3]
+    i = '@localhost'
     engine = create_engine('{}{}:{}{}/{}'.format(s, n, p, i, b))
     Base.metadata.create_all(engine)
 
