@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     db = MySQLdb.connect(host='localhost', user=user, passwd=passwd, db=db)
     cursor = db.cursor()
-    cursor.execute("SELECT cities.name FROM states JOIN cities WHERE\
+    cursor.execute("SELECT cities.name FROM cities JOIN states WHERE\
         states.id = state_id AND states.name LIKE BINARY %s;", (sys.argv[4],))
     result = cursor.fetchall()
 
