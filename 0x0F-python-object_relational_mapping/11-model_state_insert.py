@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Print first states"""
+"""Insert States"""
 
 import sys
 from model_state import Base, State
@@ -17,4 +17,8 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.execute("INSERT INTO states (name) VALUES ('Louisiana')")
+    newStates = State(name='Louisiana')
+    session.add(newStates)
+    session.commit()
+
+    print(newStates.id)
