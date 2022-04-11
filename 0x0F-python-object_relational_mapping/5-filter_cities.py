@@ -22,5 +22,5 @@ if __name__ == "__main__":
             print(result[x][0])
         else:
             print(result[x][0] + ", ", end="")
-    if i!= 1:
+    if i != 1:
         print()
