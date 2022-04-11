@@ -14,11 +14,13 @@ if __name__ == "__main__":
     cursor.execute("SELECT cities.name FROM cities JOIN states WHERE\
         states.id = state_id AND states.name LIKE BINARY %s;", (sys.argv[4],))
     result = cursor.fetchall()
+    i = 2
 
     for x in range(len(result)):
+        i = 1
         if x == len(result) - 1:
             print(result[x][0])
         else:
             print(result[x][0] + ", ", end="")
-    else:
+    if i!= 1:
         print()
