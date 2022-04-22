@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 """Get header response"""
 
-from urllib import request, parse
+import urllib.request
+import urllib.parse
 import sys
 
+url = sys.argv[1]
+params = {"email": sys.argv[2]}
+
+
 if __name__ == "__main__":
-    data = parse.urlencode({"email": sys.argv[2]}).encode()
-    req = request.Request(sys.argv[1], data=data)
-    resp = request.urlopen(req)
-    print(req)
+    query_string = urllib.parse.urlencode(params)
+    url = url + "?" + query_string
+    with urllib.request.urlopen(url) as response:
+        response_text = response.read()
+        print(response_text)
