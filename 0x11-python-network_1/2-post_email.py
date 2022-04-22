@@ -12,4 +12,4 @@ if __name__ == "__main__":
     url = url + "?" + query_string
     with urllib.request.urlopen(url) as response:
         response_text = response.read()
-        print(response_text)
+        print("Your email is:", response_text)
