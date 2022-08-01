@@ -6,5 +6,5 @@ array.reverse();
 if (!process.argv[3]) {
   console.log(0);
 } else {
-  console.log(array[1]);
+  console.log(parseInt(array[1]));
 }
