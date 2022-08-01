@@ -1,8 +1,8 @@
 #!/usr/bin/node
-exports.callMeMoby = function callMeMoby (n1) {
+exports.callMeMoby = function callMeMoby (n1, callMeMoby) {
   let i = n1;
   while (i) {
-    console.log('C is fun');
+    callMeMoby();
     i--;
   }
 };
