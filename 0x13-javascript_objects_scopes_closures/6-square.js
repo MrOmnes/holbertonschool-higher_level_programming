@@ -38,6 +38,7 @@ class Square extends Rectangle {
       this.carac = c;
       this.print();
     } else {
+      this.carac = 'X';
       this.print();
     }
   }
