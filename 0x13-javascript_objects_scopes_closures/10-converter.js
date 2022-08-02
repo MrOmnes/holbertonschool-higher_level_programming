@@ -1,4 +1,6 @@
 #!/usr/bin/node
 exports.converter = function (base) {
-	parseInt
-}
+  return function (nombre) {
+    return (nombre.toString(base));
+  };
+};
