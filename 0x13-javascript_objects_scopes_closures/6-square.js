@@ -4,14 +4,13 @@ const Rectangle = class {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-      this.carac = 'X';
     }
   }
 
   print () {
     let i = this.height;
     while (i !== 0) {
-      console.log(this.carac.repeat(this.width));
+      console.log('X'.repeat(this.width));
       i--;
     }
   }
@@ -35,10 +34,12 @@ class Square extends Rectangle {
 
   charPrint (c) {
     if (c) {
-      this.carac = c;
-      this.print();
+      let i = this.height;
+      while (i !== 0) {
+        console.log(c.repeat(this.width));
+        i--;
+      }
     } else {
-      this.carac = 'X';
       this.print();
     }
   }
