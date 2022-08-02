@@ -7,10 +7,10 @@ const Rectangle = class {
     }
   }
 
-  print () {
+  print (C='X') {
     let i = this.height;
     while (i !== 0) {
-      console.log('X'.repeat(this.width));
+      console.log(C.repeat(this.width));
       i--;
     }
   }
@@ -33,15 +33,7 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
-      let i = this.height;
-      while (i !== 0) {
-        console.log(c.repeat(this.width));
-        i--;
-      }
-    } else {
-      this.print();
-    }
+    this.print(c);
   }
 }
 
