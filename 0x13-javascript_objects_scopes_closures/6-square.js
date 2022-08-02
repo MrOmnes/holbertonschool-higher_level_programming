@@ -35,7 +35,7 @@ class Square extends Rectangle {
 
   charPrint (c) {
     if (c) {
-      this.carac = 'C';
+      this.carac = c;
       this.print();
     } else {
       this.print();
