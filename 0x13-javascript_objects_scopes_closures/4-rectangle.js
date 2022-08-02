@@ -7,10 +7,10 @@ const Rectangle = class {
     }
   }
 
-  print () {
+  print (C = 'X') {
     let i = this.height;
     while (i !== 0) {
-      console.log('X'.repeat(this.width));
+      console.log(C.repeat(this.width));
       i--;
     }
   }
