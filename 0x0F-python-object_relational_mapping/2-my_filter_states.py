@@ -11,4 +11,8 @@ if __name__ == '__main__':
     result = cursor.fetchall()
 
     for x in result:
-        print("{}".format(x))
+        print(x)
+	
+	cursor.close()
+    db.close()
+
