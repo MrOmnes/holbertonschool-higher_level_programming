@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display size of body in bytes
-curl -s "$1" -w '%{size_download}\n' | wc -c
+curl -sI "$1" | awk '/Content-Length/{print $2}'
