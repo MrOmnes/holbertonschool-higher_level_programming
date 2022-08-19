@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-"""Better Documentation"""
+"""
+Better Documentation
+"""
 from urllib.error import HTTPError
 import urllib.request
 import sys
 
 
-"""Try by adding random comment here"""
+"""
+Try by adding random comment here
+"""
 
 if __name__ == "__main__":
     try:
