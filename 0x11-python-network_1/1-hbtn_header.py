@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Better Documentation"""
+"""This is a Better Documentation"""
 import urllib.request
 import sys
 if __name__ == "__main__":
