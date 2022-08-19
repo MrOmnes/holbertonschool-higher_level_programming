@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-"""
-Better Documentation
-"""
-from urllib.error import HTTPError
-import urllib.request
+"""error code"""
 import sys
-
-
-"""
-Try by adding random comment here
-"""
+import urllib.request
+from urllib.error import HTTPError
 
 if __name__ == "__main__":
+
+    url = sys.argv[1]
     try:
-        with urllib.request.urlopen(sys.argv[1]) as response:
-            print(response.read().decode('utf-8'))
-    except HTTPError as err:
-        print("Error code: {}".format(err.code))
+        with urllib.request.urlopen(url) as response:
+            html = response.read()
+            print(html.decode('utf-8'))
+    except HTTPError as error:
+        print('Error code: {}'.format(error.code))
